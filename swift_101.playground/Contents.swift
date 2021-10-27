@@ -432,3 +432,27 @@ func genericFunc<T>(_ a : T, _ b : T, _ call:(T, T) -> String) -> String{
 let t = genericFunc(1,2) { i1, i2 in "generic"}
 print(t)
 
+protocol SampleProtocol{
+    var sampleParam : Int { get set }
+
+}
+
+protocol FullyNamed {
+    var fullName: String { get }
+}
+
+struct Person: FullyNamed {
+    var fullName: String
+}
+
+let john = Person(fullName: "John Appleseed")
+
+class John : FullyNamed{
+    var fullName: String
+    
+    init(name : String){
+        self.fullName = name
+    }
+}
+
+let j = John(name:"Jooo")
