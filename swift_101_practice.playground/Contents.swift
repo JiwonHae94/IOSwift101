@@ -119,3 +119,18 @@ func printArray(_ grid : [[String]]){
 for i in 0...20{
     drawStar(i)
 }
+
+// week 06 Challenge
+/**
+ * Challenge :
+ * 4 ppl have dinner and want to split the bill
+ * Calculate the total with tax and then how much each person owes.
+ * Assign it to the vraible, 'split' and then print it out tot he console area
+ * */
+let people : Double = 4
+let subtotal:Double = 128
+let tax = 0.13
+var split:Double = 0
+
+split = (subtotal * (1 + tax)) / people
+print("split : ", split)
